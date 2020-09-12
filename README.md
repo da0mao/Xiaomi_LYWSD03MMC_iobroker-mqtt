@@ -22,7 +22,7 @@ E4:E1:E8:E9:AE:E7 LYWSD03MMC
 53:93:02:17:E5:C5 (unknown)
 ...
 ```
-获得设备mac：`A4:C1:38:79:AE:97`，来试试看能否正常读取数据
+获得设备mac：`E4:E1:E8:E9:AE:E7`，来试试看能否正常读取数据
 ```
 $ python3 /home/pi/python3/Xiaomi_LYWSD03MMC_iobroker-mqtt/LYWSD03MMC.py -d E4:E1:E8:E9:AE:E7 -r -b 5 -c 1 -m 192.168.2.11 -del 10
 ```
