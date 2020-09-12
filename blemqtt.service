@@ -3,10 +3,10 @@ Description=BLE MQTT LYWSD03MMC
 After=network.target
 
 [Service]
-ExecStart=/home/pi/LYWSD03MMC.py -d a4:c1:38:cf:bc:2f,a4:c1:38:47:63:36 -r -b 5 -c 1 -m 192.168.0.99 -del 60
-WorkingDirectory=/home/pi
-StandardOutput=/home/pi/log1.log
-StandardError=/home/pi/log2.log
+ExecStart=python3 /home/pi/python3/MiTemperature2/LYWSD03MMC.py -d E4:E1:E8:E9:AE:E7  -r -b 5 -c 1 -m 192.168.2.11 -del 120
+WorkingDirectory=/home/pi/python3/MiTemperature2
+StandardOutput=/home/pi/python3/MiTemperature2/log.log
+StandardError=/home/pi/python3/MiTemperature2/error.log
 Restart=always
 User=pi
 
