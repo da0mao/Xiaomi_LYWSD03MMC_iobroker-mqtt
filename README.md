@@ -11,7 +11,7 @@ $ mkdir /home/pi/python3/
 $ cd /home/pi/python3/
 $ git clone https://github.com/da0mao/Xiaomi_LYWSD03MMC_iobroker-mqtt.git
 ```
-然后让我们来扫描一下你的温度计`$ sudo hcitool lescan`，获取mac地址,按ctrl+c停止，假设扫描结果如下：
+然后让我们来扫描一下你的温度计`$ sudo hcitool lescan`，获取mac地址，按ctrl+c停止，假设扫描结果如下：
 ```
 LE Scan ...
 20:09:50:FB:E4:92 (unknown)
