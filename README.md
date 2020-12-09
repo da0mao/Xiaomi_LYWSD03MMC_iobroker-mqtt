@@ -26,7 +26,7 @@ E4:E1:E8:E9:AE:E7 LYWSD03MMC
 ```
 $ python3 /home/pi/python3/Xiaomi_LYWSD03MMC_iobroker-mqtt/LYWSD03MMC.py -d E4:E1:E8:E9:AE:E7 -r -b 5 -c 1 -m 192.168.2.11 -del 10
 ```
-其中，-d （device，设备）后面是mac地址， -r（round， 圆整），-b 5（battery，电量）-c（count，每次测量次数），-m （mqtt broker地址，这里即树莓派IP），-del（delay，检测间隔10秒），结果如下：
+其中，-d （device，设备）后面是mac地址， -r（round， 圆整），-b 5（battery，电量）-c（count，每次测量次数），-m （mqtt broker地址，这里即树莓派IP），-u (mqtt用户名)，-p（mqtt密码），    -del（delay，检测间隔10秒），结果如下：
 ```
 args.device E4:E1:E8:E9:AE:E7
 ['E4:E1:E8:E9:AE:E7'] 1
