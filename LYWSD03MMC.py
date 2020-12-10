@@ -215,6 +215,8 @@ parser.add_argument("--device","-d", help="Set the device MAC-Address in format 
 parser.add_argument("--battery","-b", help="Get estimated battery level", metavar='', type=int, nargs='?', const=1)
 parser.add_argument("--count","-c", help="Read/Receive N measurements and then exit script", metavar='N', type=int)
 parser.add_argument("--delay","-del", help="Delay between taking readings from each device", metavar='N', type=int)
+parser.add_argument("--username","-u", help="mqtt username", metavar='')
+parser.add_argument("--password","-p", help="mqtt password", metavar='')
 
 rounding = parser.add_argument_group("Rounding and debouncing")
 rounding.add_argument("--round","-r", help="Round temperature to one decimal place",action='store_true')
@@ -270,6 +272,11 @@ if args.mqtt:
 else:
     print ('You must set the MQTT hostname - e.g. -m 192.168.0.99')
     os._exit(1)
+                    
+if args.username:
+    auth = {'username':args.username, 'password':args.password}
+else:
+    auth = {}   
     
 if args.delay:
     delay = args.delay
@@ -366,7 +373,7 @@ while True:
                 message = message + '"batt": "' + str(measurement.battery) + '", '
                 message = message + '"voltage": "' + str(measurement.voltage) + '"}'
                 print('Publishing ' + message)
-                publish.single(topic, message, hostname=hostname)
+                publish.single(topic, message, hostname=hostname, auth = auth)
                 cnt = 0         # reset the counter - do not exit
                 measurements.clear()            # clear the measurements array or it will continue to grow
                 set_address()                   # roll round to the next address in the array
