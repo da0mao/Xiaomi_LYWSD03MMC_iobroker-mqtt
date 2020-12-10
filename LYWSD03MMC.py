@@ -214,7 +214,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument("--device","-d", help="Set the device MAC-Address in format AA:BB:CC:DD:EE:FF",metavar='AA:BB:CC:DD:EE:FF')
 parser.add_argument("--battery","-b", help="Get estimated battery level", metavar='', type=int, nargs='?', const=1)
 parser.add_argument("--count","-c", help="Read/Receive N measurements and then exit script", metavar='N', type=int)
-parser.add_argument("--delay","-del", help="Delay between taking readings from each device", metavar='N', type=int
+parser.add_argument("--delay","-del", help="Delay between taking readings from each device", metavar='N', type=int)
 parser.add_argument("--username","-u", help="mqtt username", metavar='')
 parser.add_argument("--password","-p", help="mqtt password", metavar='')
 
